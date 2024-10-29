@@ -3,7 +3,9 @@ import React, { memo } from 'react';
 const Filter = memo(({ onFilterChange }) => {
   return (
     <div className="filter-container">
-      <input
+      <h1>Search for a movie:</h1>
+      <div className='search-bars'>
+        <input
         type="text"
         placeholder="Filter by title..."
         onChange={(e) => onFilterChange('title', e.target.value)}
@@ -18,6 +20,7 @@ const Filter = memo(({ onFilterChange }) => {
         onChange={(e) => onFilterChange('rating', e.target.value)}
         className="filter-input"
       />
+      </div>
     </div>
   );
 });
