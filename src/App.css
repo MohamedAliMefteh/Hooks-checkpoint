@@ -130,7 +130,7 @@ z-index: -1;
 }
 
 /* Movie Card Styles */
-.movie-card {
+.movie-card,.newmovie-card {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;

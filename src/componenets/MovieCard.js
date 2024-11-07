@@ -1,9 +1,11 @@
 import React, { memo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const MovieCard = memo(({ title, description, posterURL, rating, onDelete }) => {
+const MovieCard = memo(({ id,title, description, posterURL, rating, onDelete }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
+    <Link to={`Moviedetails/${id}`}>
     <div className="movie-card">
       <img 
         src={posterURL || "https://images.placeholders.dev/?width=1280&height=720"}
@@ -30,6 +32,7 @@ const MovieCard = memo(({ title, description, posterURL, rating, onDelete }) => 
         </button>
       </div>
     </div>
+    </Link>
   );
 });
 
